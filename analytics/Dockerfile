@@ -17,8 +17,10 @@ RUN apt-get update -y && \
 
 COPY . /app
 
-
+COPY analytics/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
 
 EXPOSE 5153
 
