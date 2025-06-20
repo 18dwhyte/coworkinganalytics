@@ -1,5 +1,5 @@
 
-FROM 602448097283.dkr.ecr.us-east-1.amazonaws.com/python-3.9-slim:latest
+FROM python:3.9-slim-buster
 
 
 WORKDIR /app
