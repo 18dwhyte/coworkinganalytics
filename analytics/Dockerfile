@@ -17,11 +17,10 @@ RUN apt-get update -y && \
 
 COPY . /app
 
-
 RUN pip install --no-cache-dir -r requirements.txt
 
 EXPOSE 5153
 
 ENV NAME coworking-analytics
 
-CMD ["python", "app.py"]
+CMD ["python", "analytics/app.py"]

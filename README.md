@@ -129,3 +129,21 @@ Please provide up to 3 sentences for each suggestion. Additional content in your
 ### Best Practices
 * Dockerfile uses an appropriate base image for the application being deployed. Complex commands in the Dockerfile include a comment describing what it is doing.
 * The Docker images use semantic versioning with three numbers separated by dots, e.g. `1.2.1` and  versioning is visible in the  screenshot. See [Semantic Versioning](https://semver.org/) for more details.
+
+### RUN Command
+eksctl create cluster --name my-cluster --region us-east-1 --nodegroup-name my-nodes --node-type t3.small --nodes 1 --nodes-min 1 --nodes-max 2 --version 1.25
+
+kubectl apply -f pvc.yaml
+kubectl apply -f pv.yaml
+kubectl apply -f postgresql-deployment.yaml
+
+kubectl apply -f postgresql-service.yaml
+aws eks --region us-east-1 update-kubeconfig --name my-cluster
+kubectl port-forward service/postgresql-service 5433:5432 &
+
+
+### Delete Cluster
+eksctl delete cluster --name my-cluster --region us-east-1
+
+###Verify Docker
+docker run --network="host" -e DB_PASSWORD=$POSTGRES_PASSWORD test-coworking-analytics

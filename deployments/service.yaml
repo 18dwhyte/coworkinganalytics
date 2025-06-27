@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: coworkinganalytics-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: coworkinganalytics
+  ports:
+    - protocol: TCP
+      port: 5153
+      targetPort: 30277
