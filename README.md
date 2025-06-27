@@ -131,7 +131,7 @@ Please provide up to 3 sentences for each suggestion. Additional content in your
 * The Docker images use semantic versioning with three numbers separated by dots, e.g. `1.2.1` and  versioning is visible in the  screenshot. See [Semantic Versioning](https://semver.org/) for more details.
 
 ### RUN Command
-eksctl create cluster --name my-cluster --region us-east-1 --nodegroup-name my-nodes --node-type t3.small --nodes 1 --nodes-min 1 --nodes-max 2 --version 1.25
+eksctl create cluster --name my-cluster --region us-east-1 --nodegroup-name my-nodes --node-type t3.small --nodes 1 --nodes-min 1 --nodes-max 2 --version 1.33
 
 kubectl apply -f pvc.yaml
 kubectl apply -f pv.yaml
